@@ -1,0 +1,18 @@
+---
+import {Image} from "astro:assets";
+
+import Avatar from "./Avatar.astro"
+
+const avatar = Astro.props.avatar;
+const name = Astro.props.name;
+const position = Astro.props.position;
+const text = Astro.props.text;
+---
+
+<!-- @component START: Testimonial -->
+<div class="flex flex-col justify-start items-start p-6 border border-border bg-[#ffffff]">
+    <Avatar src={avatar} alt={name} />
+    <p class="font-sans text-base text-muted leading-relaxed mt-3 mb-6">{text}</p>
+    <h2 class="font-display text-base font-medium">{name}</h2>
+    <span class="font-display text-base font-light">{position}</span>
+</div>

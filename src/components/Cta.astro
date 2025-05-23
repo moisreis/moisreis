@@ -1,0 +1,24 @@
+---
+import Heading from "./Heading.astro";
+import Badge from "./Badge.astro";
+import Button from '../components/Button.astro';
+
+import { Image } from "astro:assets";
+
+const title = Astro.props.title;
+const call = Astro.props.call;
+const text = Astro.props.text;
+const bg = Astro.props.bg;
+---
+
+<!-- @component START: Cta -->
+<section class="w-full flex flex-col justify-start items-start gap-6 py-24 relative">
+    <Badge variant="secondary" title="+ de 5 sites entregues com qualidade"/>
+    <Heading title={title} text={text} />
+    <Button title={call} variant="primary" size="large"/>
+    {bg && (
+        <div class="w-[40%] h-full absolute top-1/2 -translate-y-1/2 right-0 z-0">
+            <Image src={bg} alt="Background" class="w-full h-full object-cover aspect-square" />
+        </div>
+    )}
+</section>

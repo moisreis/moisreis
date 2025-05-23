@@ -1,0 +1,9 @@
+---
+import { Image } from "astro:assets";
+
+const src = Astro.props.src;
+const alt = Astro.props.alt;
+---
+
+<!-- @component START: Avatar -->
+<Image class="w-12 h-12 mb-3 object-cover rounded-full" src={src} alt={alt}></Image>
