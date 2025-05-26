@@ -12,10 +12,23 @@ import Rosanna from "../assets/rosanna.jpg";
 import Background from "../assets/djxeSyUR0j8.jpg";
 import JudasAsBotasDe from "../assets/judasasbotasde.png";
 import Pobrefobia from "../assets/pobrefobia.png";
-import Imbe from "../assets/imbe.png"
-import Moises from "../assets/avatar.jpg"
-import {Image} from "astro:assets";
-import Badge from "../components/Badge.astro";
+import Imbe from "../assets/imbe.png";
+import ClinicaDermaPrime from "../assets/clinicadermaprime.png";
+import BridalStories from "../assets/bridalstories.png";
+import Lapec from "../assets/lapec.png";
+import Reppod from "../assets/reppod.png";
+
+const items = [
+    {
+        name: 'Conversa inicial de 10 minutos',
+        text: 'Entendo sua ideia, contexto, necessidades e metas. Sem pressa e com muita atenção.'
+    },
+    {name: 'Proposta sob medida', text: 'Envio uma proposta com escopo claro, prazos realistas e valores justos.'},
+    {
+        name: 'Execução e entrega',
+        text: 'Desenvolvimento com revisões, testes e publicação. Transparência e acompanhamento.'
+    },
+];
 ---
 
 <Layout>
@@ -25,7 +38,7 @@ import Badge from "../components/Badge.astro";
     </Cta>
     <section class="flex flex-col justify-center pt-12 pb-12">
         <Heading name="meus clientes" title="Você também pode ter um site assim"></Heading>
-        <div class="grid grid-cols-3 gap-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 py-12">
             <Testimonial avatar={Alex} name="Alex Santos" position="CEO da Plano A"
                          text="Contratar o Moisés foi uma das melhores decisões que tomamos. Ele entendeu exatamente o que precisávamos e entregou um site rápido, bonito e fácil de atualizar. Profissional sério, pontual e muito competente. Recomendo sem hesitar."/>
             <Testimonial avatar={Alex} name="Arthur Borba" position="Software Developer"
@@ -42,31 +55,44 @@ import Badge from "../components/Badge.astro";
         <div class="flex flex-col justify-start gap-6">
             <Heading
                     text="Clientes satisfeitos são minha maior propaganda. Entre em contato e descubra como posso ajudar você a crescer online com qualidade e confiança."></Heading>
-            <Button variant="primary" title="Comece agora" size="large"></Button>
+            <Button variant="primary" link="https://tally.so/r/wo1EeP" title="Comece agora" size="large"></Button>
         </div>
     </section>
-    <section class="flex flex-col justify-center gap-12 pt-12 pb-12">
+    <!-- @section: MyWork -->
+    <section class="flex flex-col justify-center gap-12 pt-12 pb-12" id="MyWork">
         <Heading
                 title="Histórias de sucesso"
                 text="Trabalho com tecnologias modernas para entregar soluções robustas, bonitas e funcionais. Veja o que posso fazer por você.">
         </Heading>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <SiteCard title="JUDAS, As botas de"
-                      text="Plataformas de artigos de opinião e científicos."
+                      text="Planejamento, design e desenvolvimento de uma plataforma de artigos de opinião e científicos."
                       techs="WordPress, JavaScript e Tailwind"
                       bg={JudasAsBotasDe}/>
-            <SiteCard title="Pobrefobia"
-                      text="Plataformas de artigos do Observatório da Aporofobia em São Paulo."
-                      techs="WordPress, Tailwind CSS"
-                      bg={Pobrefobia}/>
-            <SiteCard title="LNotícias"
-                      text="Um site para um jornal local."
-                      techs="WordPress"
-                      bg={Pobrefobia}/>
             <SiteCard title="Imbê"
-                      text="Site institucional para uma agência de design de interiores em São Paulo, focado em SEO."
+                      text="Planejamento, design e desenvolvimento de site institucional para uma agência de design de interiores em São Paulo, focado em SEO."
                       techs="WordPress, SCSS, JavaScript e ACF"
                       bg={Imbe}/>
+            <SiteCard title="Pobrefobia"
+                      text="Planejamento, design e desenvolvimento de plataforma de artigos do Observatório da Aporofobia em São Paulo."
+                      techs="WordPress, Tailwind CSS"
+                      bg={Pobrefobia}/>
+            <SiteCard title="Pobrefobia"
+                      text="Planejamento e desenvolvimento de site institucional para a REPPOD da UNEB de Jacobina."
+                      techs="WordPress, Tailwind CSS"
+                      bg={Reppod}/>
+            <SiteCard title="Clínica Derma Prime"
+                      text="Migração e manutenção de site para uma clínica especializada em Brasília"
+                      techs="WordPress"
+                      bg={ClinicaDermaPrime}/>
+            <SiteCard title="Bridal Stories"
+                      text="Manutenção e correção de erros em uma loja de vestidos de noiva em Portugal"
+                      techs="WordPress"
+                      bg={BridalStories}/>
+            <SiteCard title="LAPEC"
+                      text="Migração de site para o Joomla em Jacobina"
+                      techs="Joomla"
+                      bg={Lapec}/>
         </div>
     </section>
     <section class="flex flex-col justify-center gap-12 pt-12 pb-12">
@@ -96,32 +122,41 @@ import Badge from "../components/Badge.astro";
         </div>
     </section>
     <section class="flex flex-col justify-center gap-12 pt-12 pb-12">
-        <Heading title="Como trabalho" text="Cada projeto é único, mas sigo princípios que garantem clareza, qualidade e responsabilidade."></Heading>
+        <Heading title="Como trabalho"
+                 text="Cada projeto é único, mas sigo princípios que garantem clareza, qualidade e responsabilidade."></Heading>
         <ul class="flex flex-col gap-6 justify-start">
-            <li class="flex flex-col gap-3 py-6 border-b border-border">
-                <span class="font-display text-3xl text-primary font-light">1.</span>
-                <h3 class="text-3xl font-medium font-display lowercase text-primary">Conversa inicial</h3>
-                <p class="text-xl text-muted font-sans">Entendo sua ideia, contexto, necessidades e metas. Sem pressa, com atenção.</p>
-            </li>
-            <li>
-                <h3 class="text-xl font-semibold">2. Proposta sob medida</h3>
-                <p>Envio uma proposta com escopo claro, prazos realistas e valores justos.</p>
-            </li>
-            <li>
-                <h3 class="text-xl font-semibold">3. Execução e entrega</h3>
-                <p>Desenvolvimento com revisões, testes e publicação. Transparência e acompanhamento.</p>
-            </li>
+            {items.map((item, index) => (
+                    <li class="flex flex-col gap-3 py-6 bg-[#ffffff] p-6 border border-border">
+                        <span class="font-display text-xl text-primary font-medium">{index + 1}</span>
+                        <h3 class="text-xl font-medium font-display lowercase text-primary">{item.name}</h3>
+                        <p class="text-xl text-muted font-sans">{item.text}</p>
+                    </li>
+            ))}
         </ul>
     </section>
-    <section class="flex flex-col justify-center gap-12 pt-12 pb-12">
+    <!-- @section: AboutMe -->
+    <section class="flex flex-col justify-center gap-12 pt-12 pb-12" id="AboutMe">
         <div class="w-full flex flex-col justify-center items-center gap-6 py-24 relative">
             <div class="flex flex-col justify-center relative z-10 items-center">
                 <span class="font-display text-base text-center text-primary font-light mb-6">quem eu sou</span>
-                <h1 class="font-sans text-7xl text-center w-3/4 font-medium mb-12">Baiano, engenheiro de software em
+                <h1 class="font-sans text-5xl lg:text-7xl text-center w-full lg:w-3/4 font-medium mb-12">Baiano, <i>engenheiro
+                    de software</i> em
                     formação e apaixonado por construir com propósito</h1>
-                <p class="font-sans text-xl text-center w-3/4 text-muted">Sou Moisés Reis — desenvolvedor web e estudante de Engenharia de Software na UNINTER. Nascido num povoado da Bahia, iniciei minha formação na Escola Família Agrícola de Jabuticaba, onde aprendi desde cedo a valorizar o trabalho, a comunidade e o conhecimento aplicado à vida real. Depois, estudei Informática no IFBA, o que despertou meu interesse pela tecnologia. Por um tempo, cursei História, área pela qual ainda tenho grande apreço. Mas foi na Engenharia de Software que encontrei o equilíbrio entre razão, criação e propósito. A escolha pela programação veio do desejo de construir soluções com lógica, beleza e utilidade. Ao longo dos anos, mergulhei em tecnologias como Next.js, WordPress e Ruby on Rails, sempre buscando não só o domínio técnico, mas uma postura responsável e ética diante de cada projeto. Sou casado, tutor de cinco gatos e interessado por ciência, história e tecnologia. Levo para minha rotina profissional os mesmos valores que cultivo na vida pessoal: clareza, compromisso e respeito por quem confia em mim</p>
+                <p class="font-sans text-xl text-center w-full lg:w-3/4 text-muted">Sou Moisés Reis — desenvolvedor web
+                    e
+                    estudante de Engenharia de Software na UNINTER. Nascido num povoado da Bahia, iniciei minha formação
+                    na Escola Família Agrícola de Jabuticaba, onde aprendi desde cedo a valorizar o trabalho, a
+                    comunidade e o conhecimento aplicado à vida real. Depois, estudei Informática no IFBA, o que
+                    despertou meu interesse pela tecnologia. Por um tempo, cursei História, área pela qual ainda tenho
+                    grande apreço. Mas foi na Engenharia de Software que encontrei o equilíbrio entre razão, criação e
+                    propósito. A escolha pela programação veio do desejo de construir soluções com lógica, beleza e
+                    utilidade. Ao longo dos anos, mergulhei em tecnologias como Next.js, WordPress e Ruby on Rails,
+                    sempre buscando não só o domínio técnico, mas uma postura responsável e ética diante de cada
+                    projeto. Sou casado, tutor de cinco gatos e interessado por ciência, história e tecnologia. Levo
+                    para minha rotina profissional os mesmos valores que cultivo na vida pessoal: clareza, compromisso e
+                    respeito por quem confia em mim</p>
             </div>
-            <Button title="Entre em contato" variant="primary" size="large"/>
+            <Button title="Entre em contato" link="https://tally.so/r/wo1EeP" variant="primary" size="large"/>
         </div>
     </section>
 </Layout>
