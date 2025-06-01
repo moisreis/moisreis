@@ -10,11 +10,8 @@ import {Image} from "astro:assets";
 ---
 
 <!-- @component START: ServiceCard -->
-<div class="p-6 border border-border bg-[#ffffff] relative">
+<div class="p-6 outline-3 bg-white outline-secondary outline-dashed rounded-2xl relative">
     <h3 class="text-lg font-display font-medium mb-3">{title}</h3>
     <p class="text-base text-muted mb-6">{text}</p>
-    <Image src={bg} alt="Background" class="w-full h-fit object-cover aspect-square border border-border mb-1.5"/>
-    <div class="flex flex-row gap-1.5 justify-start items-center mt-6">
-        <Badge variant="outline" title={techs}/>
-    </div>
+    <Image src={bg} alt="Background" class="w-full object-contain h-fit border border-border mb-1.5 rounded-xl"/>
 </div>

@@ -7,9 +7,8 @@ import Button from '../components/Button.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import SiteCard from '../components/SiteCard.astro';
 
-import Alex from "../assets/alex.jpg";
 import Rosanna from "../assets/rosanna.jpg";
-import Background from "../assets/djxeSyUR0j8.jpg";
+import Background from "../assets/3Dc-I-65ug.jpg";
 import JudasAsBotasDe from "../assets/judasasbotasde.png";
 import Pobrefobia from "../assets/pobrefobia.png";
 import Imbe from "../assets/imbe.png";
@@ -18,6 +17,7 @@ import BridalStories from "../assets/bridalstories.png";
 import Lapec from "../assets/lapec.png";
 import Reppod from "../assets/reppod.png";
 import Laila from "../assets/laila.png";
+import Gabriela from "../assets/gabriela.png"
 
 const items = [
     {
@@ -38,17 +38,14 @@ const items = [
          bg={Background}>
     </Cta>
     <section class="flex flex-col justify-center pt-12 pb-12">
-        <Heading name="meus clientes" title="Você também pode ter um site assim"></Heading>
+        <Heading name="meus clientes" title="Você também pode ter um site assim" text="Clientes satisfeitos são minha maior propaganda. Entre em contato e descubra como posso ajudar você a crescer online com qualidade e confiança." button="Vamos trabalhar juntos"></Heading>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 py-12">
             <Testimonial avatar={Rosanna} name="Rosana Sant'Anna" position="Dona da Imbê"
                          text="Fiz o site da minha empresa com o Moisés! Desde o início, foi uma experiência muito agradável, com reuniões e mensagens, uma relação sempre muito atenciosa. Além de dominar todos os conhecimentos técnicos de web design, o Moisés também contribuiu com ótimas ideias de conteúdo. Ele soube traduzir a essência da minha marca com muito profissionalismo. O resultado final ficou com a nossa cara e muito bonito. Recomendo bastante!."/>
             <Testimonial avatar={Laila} name="Laila Gebhard" position="Desenvolvedora Mainframe"
                          text="Moisés e eu trabalhamos juntos no desenvolvimento de um site, entreguei a ele a UI do projeto e ele ficou responsável pelo desenvolvimento. Tive uma experiência bem positiva, vale ressaltar sua bagagem técnica e facilidade de comunicação. Recomendo!"/>
-        </div>
-        <div class="flex flex-col justify-start gap-6">
-            <Heading
-                    text="Clientes satisfeitos são minha maior propaganda. Entre em contato e descubra como posso ajudar você a crescer online com qualidade e confiança."></Heading>
-            <Button variant="primary" link="https://tally.so/r/wo1EeP" title="Comece agora" size="large"></Button>
+            <Testimonial avatar={Gabriela} name="Gabriela Oliveira" position="Design Gráfica"
+                         text="Trabalhar com Moisés foi muito tranquilo. Como colega de trabalho dele, sempre foi muito fácil trabalhar em equipe, tirar dúvidas, entender as necessidades e fazermos os projetos dar certo. Moisés é muito focado e talentoso, tem um bom senso de responsabilidade e por isso tivemos resultados tão bons em tão pouco tempo. Espero ter a oportunidade de trabalhar junto a ele novamente."/>
         </div>
     </section>
     <!-- @section: MyWork -->
@@ -57,7 +54,7 @@ const items = [
                 title="Histórias de sucesso"
                 text="Trabalho com tecnologias modernas para entregar soluções robustas, bonitas e funcionais. Veja o que posso fazer por você.">
         </Heading>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
             <SiteCard title="JUDAS, As botas de"
                       text="Planejamento, design e desenvolvimento de uma plataforma de artigos de opinião e científicos."
                       techs="WordPress, JavaScript e Tailwind"
@@ -117,11 +114,11 @@ const items = [
     <section class="flex flex-col justify-center gap-12 pt-12 pb-12">
         <Heading title="Como trabalho"
                  text="Cada projeto é único, mas sigo princípios que garantem clareza, qualidade e responsabilidade."></Heading>
-        <ul class="flex flex-col gap-6 justify-start">
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-8">
             {items.map((item, index) => (
-                    <li class="flex flex-col gap-3 py-6 bg-[#ffffff] p-6 border border-border">
-                        <span class="font-display text-xl text-primary font-medium">{index + 1}</span>
-                        <h3 class="text-xl font-medium font-display lowercase text-primary">{item.name}</h3>
+                    <li class="flex flex-col gap-3 p-6 outline-3 bg-white outline-secondary outline-dashed rounded-2xl">
+                        <span class="font-display text-lg text-primary font-medium">{index + 1}</span>
+                        <h3 class="text-lg font-medium font-display text-primary">{item.name}</h3>
                         <p class="text-lg text-muted font-sans">{item.text}</p>
                     </li>
             ))}
@@ -132,7 +129,7 @@ const items = [
         <div class="w-full flex flex-col justify-center items-center gap-6 py-24 relative">
             <div class="flex flex-col justify-center relative z-10 items-center">
                 <span class="font-display text-base text-center text-primary font-light mb-6">quem eu sou</span>
-                <h1 class="font-sans text-5xl lg:text-7xl text-center w-full lg:w-3/4 font-medium mb-12">Baiano, <i>engenheiro
+                <h1 class="font-display text-5xl lg:text-7xl text-center w-full lg:w-3/4 font-black mb-12">Baiano, <i>engenheiro
                     de software</i> em
                     formação e apaixonado por construir com propósito</h1>
                 <p class="font-sans text-xl text-center w-full lg:w-3/4 text-muted">Sou Moisés Reis — desenvolvedor web

@@ -5,8 +5,8 @@ const text = Astro.props.text;
 ---
 
 <!-- @component START: ServiceCard -->
-<div class="p-12 border border-border bg-[#ffffff]">
+<div class="p-12 outline-3 bg-white outline-secondary outline-dashed rounded-2xl">
     <h3 class="text-lg font-display font-medium mb-3">{title}</h3>
     <p class="text-base text-muted mb-6">{text}</p>
-    <p class="text-base font-medium lowercase text-primary font-light">_a partir de <span class="uppercase font-bold">{price}</span></p>
+    <p class="text-base font-medium text-body">A partir de <span class="uppercase font-bold">{price}</span></p>
 </div>

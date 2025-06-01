@@ -1,12 +1,16 @@
 ---
+import Button from "./Button.astro";
+
 const title = Astro.props.title;
 const text = Astro.props.text;
 const name = Astro.props.name;
+const button = Astro.props.button;
 ---
 
 <!-- @component START: Heading -->
 <div class="flex flex-col justify-start relative z-10">
     {name && (<span class="font-display text-base text-left text-primary font-light mb-6">{name}</span>)}
-    {title && (<h1 class="font-display text-5xl lg:text-7xl text-left w-full lg:w-1/2 font-medium mb-12">{title}</h1>)}
-    {text && (<p class="font-sans text-xl text-left w-full lg:w-1/2 text-muted">{text}</p>)}
+    {title && (<h1 class="font-display text-5xl lg:text-7xl text-left w-full lg:w-1/2 font-black mb-6">{title}</h1>)}
+    {text && (<p class="font-sans text-xl text-left w-full lg:w-1/2 text-muted mb-6">{text}</p>)}
+    {button && (<Button variant="tertiary" title={button} size="large"></Button>)}
 </div>

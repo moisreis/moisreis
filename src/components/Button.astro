@@ -3,18 +3,19 @@ import Icon from "heroicons-astro/Heroicon.astro";
 
 const {title, link, variant = "primary", size = "normal"} = Astro.props;
 
-const base = "flex flex-row px-3 py-1.5 font-display text-sm font-medium w-fit lowercase hover:outline-1 hover:outline-primary hover:outline-offset-2 active:outline-offset-3 cursor-pointer";
+const base = "relative z-10 flex flex-row font-display rounded-xl text-sm font-bold w-fit capitalize outline-2 outline-dashed outline-offset-2 active:outline-offset-3 cursor-pointer";
 
 const variants = {
-    primary: "bg-primary text-background",
-    secondary: "bg-secondary text-body",
-    link: "bg-transparent text-body hover:underline",
-    tertiary: "bg-tertiary text-body border-2 border-secondary",
+    primary: "bg-primary text-background outline-black",
+    secondary: "bg-secondary text-body outline-secondary",
+    link: "bg-transparent text-body hover:underline !outline-none",
+    tertiary: "bg-tertiary text-body outline-black",
+    blur: "text-body bg-transparent backdrop-blur-2xl outline-black",
 };
 
 const sizes = {
-    normal: "px-3 py-1.5",
-    large: "px-6 py-3",
+    normal: "px-2 py-1",
+    large: "px-3 py-1.5",
 };
 
 const styles = `${base} ${variants[variant] || variants["primary"]} ${sizes[size] || sizes["normal"]}`;
