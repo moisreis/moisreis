@@ -1,0 +1,27 @@
+---
+import Heading from "./Heading.astro";
+
+const id = Astro.props.id;
+const name = Astro.props.name;
+const title = Astro.props.title;
+const text = Astro.props.text;
+const button = Astro.props.button;
+const layout = Astro.props.layout;
+
+const base = "gap-6 py-12"
+
+const layouts = {
+    gridTwo: "grid grid-cols-1 xl:grid-cols-2 gap-6",
+    gridThree: "grid grid-cols-1 lg:grid-cols-3 gap-6 py-12",
+};
+
+const styles = `${base} ${layouts[layout] || layouts["gridTwo"]}`;
+---
+
+<!-- @component START: Section -->
+<section class="flex flex-col justify-center pt-12 pb-12" id={id}>
+    <Heading name={name} title={title} text={text} button={button}></Heading>
+    <div class={styles}>
+        <slot/>
+    </div>
+</section>
