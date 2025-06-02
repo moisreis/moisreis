@@ -12,16 +12,17 @@
     --color-secondary: #C5BAFF;
     --color-secondary-light: #EEF5FF;
     --color-tertiary: #FFF100;
+    --color-tertiary-light: #FFF9D0;
     --color-background: #fbfbfb;
     --color-body: #333333;
-    --color-border: #e7e7e7;
+    --color-border: #e1e1e1;
     --color-muted: #7a7a7a;
     --color-black: #000000;
     --color-accent: #f9f9f9;
     --color-white: #ffffff;
 
     --shadow-card: 12px 12px 0px;
-    --shadow-header: 3px 3px 0px;
+    --shadow-header: 4px 4px 0px;
 }
 
 @layer utility {
