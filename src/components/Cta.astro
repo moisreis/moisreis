@@ -7,70 +7,36 @@ import {Image} from "astro:assets";
 const title = Astro.props.title;
 const call = Astro.props.call;
 const text = Astro.props.text;
-const bg = Astro.props.bg;
+const bgOne = Astro.props.bgOne;
+const bgTwo = Astro.props.bgTwo;
 ---
 
 <!-- @component START: Cta -->
-<section class="w-full flex flex-col justify-center items-start gap-6 py-24 relative h-screen -top-3">
-    <div class="flex flex-col justify-start relative z-10">
-        {title && (
-                <h1 class="font-display text-5xl xl:text-8xl text-background text-left w-full xl:w-2/3 font-black mb-12">{title}</h1>)}
-        {text && (<p class="font-sans text-xl text-left w-full xl:w-2/3 text-background">{text}</p>)}
+<section class="grid grid-cols-1 2xl:grid-cols-2 py-6 xl:py-24">
+    <div class="flex flex-col justify-center items-start gap-6 pb-24 pt-12 xl:py-24">
+        <div class="flex flex-col justify-start relative z-10">
+            {title && (
+                    <h1 class="font-display text-5xl xl:text-7xl !text-body text-left w-full xl:w-[90%] font-black mb-12">{title}</h1>)}
+            {text && (<p class="font-sans text-xl text-left w-full w-full xl:w-[90%] !text-muted">{text}</p>)}
+        </div>
+        <Button title={call} link="https://tally.so/r/wo1EeP" variant="primary" size="large"/>
     </div>
-    <Button title={call} link="https://tally.so/r/wo1EeP" variant="primary" size="large"/>
-    {bg && (
-            <div class="w-[95vw] rounded-3xl h-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-0 overflow-hidden">
-                <Image src={bg} alt="Background" class="w-full h-full object-cover aspect-square"/>
+    {bgOne && bgTwo && (
+            <div class="flex flex-row justify-center items-center -space-x-12">
+                <div class="w-1/2 rounded-3xl h-[35vw]">
+                    <Image src={bgOne} alt="Background"
+                           class="w-full h-full object-cover aspect-square rounded-3xl outline-2 outline-offset-2 outline-dashed outline-border -rotate-6 boxShadow"/>
+                </div>
+                <div class="w-1/2 rounded-3xl h-[35vw]">
+                    <Image src={bgTwo} alt="Background"
+                           class="w-full h-full object-cover aspect-square rounded-3xl outline-2 outline-offset-2 outline-dashed outline-border rotate-6 boxShadow"/>
+                </div>
             </div>
     )}
 </section>
 
 <style>
-    .grainEffect:after {
-        content: "";
-        background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
-        height: 300%;
-        width: 300%;
-        top: 0;
-        position: fixed;
-        opacity: 0.1;
-        animation: animateGrain 8s steps(10) infinite;
-    }
-
-    @keyframes animateGrain {
-        0%, 100% {
-            transform: translate(0, 0)
-        }
-        10% {
-            transform: translate(-5%, -10%)
-        }
-        20% {
-            transform: translate(-15%, -20%)
-        }
-        30% {
-            transform: translate(-5%, -10%)
-        }
-        40% {
-            transform: translate(-15%, -20%)
-        }
-
-        50% {
-            transform: translate(-5%, -10%)
-        }
-        60% {
-            transform: translate(-15%, -20%)
-        }
-        70% {
-            transform: translate(-5%, -10%)
-        }
-        80% {
-            transform: translate(-15%, -20%)
-        }
-        90% {
-            transform: translate(-5%, -10%)
-        }
-        100% {
-            transform: translate(-15%, -20%)
-        }
+    .boxShadow {
+        box-shadow: var(--shadow-card) var(--color-primary-light);
     }
 </style>

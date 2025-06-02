@@ -3,12 +3,12 @@ import Icon from "heroicons-astro/Heroicon.astro";
 
 const {title, link, variant = "primary", size = "normal"} = Astro.props;
 
-const base = "relative z-10 flex h-8 flex-row font-display rounded-xl text-sm font-bold w-fit capitalize outline-2 outline-dashed outline-offset-2 active:outline-offset-3 cursor-pointer before:ease overflow-hidden transition-all before:absolute before:right-0 before:top-1/2 before:-translate-y-1/2 before:h-36 before:w-9 before:translate-x-12 before:rotate-12 before:bg-background before:opacity-70 before:duration-400 hover:before:-translate-x-40";
+const base = "relative z-10 flex h-8 flex-row font-display rounded-xl text-sm font-bold w-fit capitalize outline-2 outline-dashed outline-offset-2 active:outline-offset-3 cursor-pointer before:ease overflow-hidden transition-all before:absolute before:right-0 before:top-1/2 before:-translate-y-1/2 before:h-36 before:w-9 before:translate-x-12 before:rotate-12 before:bg-background before:opacity-70 before:duration-400 hover:before:-translate-x-40 hover:scale-120";
 
 const variants = {
     primary: "bg-primary text-background outline-black",
     secondary: "bg-secondary text-body outline-secondary",
-    link: "bg-transparent text-body hover:underline !outline-none",
+    link: "bg-transparent text-body hover:underline !outline-none hover:!scale-100 before:!bg-transparent",
     tertiary: "bg-tertiary text-body outline-black",
     blur: "text-body bg-transparent backdrop-blur-2xl outline-black",
 };

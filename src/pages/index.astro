@@ -4,13 +4,14 @@ import Cta from '../components/Cta.astro';
 import CtaCenter from '../components/CtaCenter.astro';
 import Testimonial from '../components/Testimonial.astro';
 import ProcessCard from '../components/ProcessCard.astro';
-import Button from '../components/Button.astro';
+import Heading from '../components/Heading.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import SiteCard from '../components/SiteCard.astro';
 import Section from '../components/Section.astro';
 
 import Rosanna from "../assets/rosanna.jpg";
-import Background from "../assets/3Dc-I-65ug.jpg";
+import BackgroundOne from "../assets/djxeSyUR0j8.jpg";
+import BackgroundoTwo from "../assets/iiqpxCg2GD4.jpg";
 import JudasAsBotasDe from "../assets/judasasbotasde.png";
 import Pobrefobia from "../assets/pobrefobia.png";
 import Imbe from "../assets/imbe.png";
@@ -38,9 +39,9 @@ const items = [
 ---
 
 <Layout>
-    <Cta title="Sua ideia merece voar alto. E eu sei que posso te ajudar" call="Me conte sua ideia"
+    <Cta title="Sua ideia merece voar alto. E eu sei que posso te ajudar ✨" call="Me conte sua ideia"
          text="Sou Moisés Reis, desenvolvedor especializado em soluções modernas com Next.js, WordPress e Ruby on Rails. Transformo suas ideias em sites rápidos, seguros e bonitos — do seu jeito."
-         bg={Background}>
+         bgOne={BackgroundOne} bgTwo={BackgroundoTwo}>
     </Cta>
     <Section link="https://tally.so/r/wo1EeP" name="meus clientes" title="Você também pode ter um site assim 🚀"
              text="Clientes satisfeitos são minha maior propaganda. Entre em contato e descubra como posso ajudar você a crescer online com qualidade e confiança."
@@ -50,7 +51,7 @@ const items = [
                      text="Fiz o site da minha empresa com o Moisés! Desde o início, foi uma experiência muito agradável, com reuniões e mensagens, uma relação sempre muito atenciosa. Além de dominar todos os conhecimentos técnicos de web design, o Moisés também contribuiu com ótimas ideias de conteúdo. Ele soube traduzir a essência da minha marca com muito profissionalismo. O resultado final ficou com a nossa cara e muito bonito. Recomendo bastante!."/>
         <Testimonial avatar={Laila} name="Laila Gebhard" position="Desenvolvedora Mainframe"
                      text="Moisés e eu trabalhamos juntos no desenvolvimento de um site, entreguei a ele a UI do projeto e ele ficou responsável pelo desenvolvimento. Tive uma experiência bem positiva, vale ressaltar sua bagagem técnica e facilidade de comunicação. Recomendo!"/>
-        <Testimonial avatar={Gabriela} name="Gabriela Oliveira" position="Design Gráfica"
+        <Testimonial avatar={Gabriela} name="Gabriela Dantas" position="Designer"
                      text="Trabalhar com Moisés foi muito tranquilo. Como colega de trabalho dele, sempre foi muito fácil trabalhar em equipe, tirar dúvidas, entender as necessidades e fazermos os projetos dar certo. Moisés é muito focado e talentoso, tem um bom senso de responsabilidade e por isso tivemos resultados tão bons em tão pouco tempo. Espero ter a oportunidade de trabalhar junto a ele novamente."/>
     </Section>
     <Section name="meus trabalhos" title="Histórias de sucesso 🏆"
