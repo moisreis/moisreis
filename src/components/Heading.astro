@@ -5,6 +5,7 @@ const title = Astro.props.title;
 const text = Astro.props.text;
 const name = Astro.props.name;
 const button = Astro.props.button;
+const link = Astro.props.link;
 ---
 
 <!-- @component START: Heading -->
@@ -12,5 +13,5 @@ const button = Astro.props.button;
     {name && (<span class="font-display text-base text-left text-primary font-light mb-3">{name}</span>)}
     {title && (<h1 class="font-display text-5xl lg:text-7xl text-left w-full lg:w-2/3 font-black mb-3">{title}</h1>)}
     {text && (<p class="font-sans text-xl text-left w-full lg:w-2/3 text-muted mb-6">{text}</p>)}
-    {button && (<Button variant="tertiary" title={button} size="large"></Button>)}
+    {button && (<Button link={link} variant="tertiary" title={button} size="large"></Button>)}
 </div>
