@@ -3,17 +3,22 @@ const title = Astro.props.title;
 const bg = Astro.props.bg;
 const text = Astro.props.text;
 const techs = Astro.props.techs;
+const link = Astro.props.link;
 
 import Badge from "./Badge.astro";
 
+import ArrowUpRight from "../assets/arrow-up-right.svg"
 import {Image} from "astro:assets";
 ---
 
 <!-- @component START: ServiceCard -->
-<div class="p-6 outline-3 bg-white outline-black outline-dashed rounded-2xl relative boxShadow first:rotate-3 last:-rotate-3">
+<div class="p-6 outline-3 bg-white outline-black outline-dashed rounded-2xl relative boxShadow first:rotate-3 last:-rotate-3 rotate-animation group">
     <h3 class="text-lg font-display font-medium mb-3">{title}</h3>
     <p class="text-base text-muted mb-6">{text}</p>
     <Image src={bg} alt="Background" class="w-full object-contain h-fit border border-border mb-1.5 rounded-xl"/>
+    <a href={link} class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-24 h-24 rounded-full bg-secondary-light/50 backdrop-blur-2xl outline-2 outline-offset-2 outline-dashed outline-primary flex flex-row items-center justify-center shadow-sm scale-0 group-hover:scale-100 transition-transform hover:-rotate-12 hover:scale-110">
+        <Image src={ArrowUpRight} alt="Ir para o site" />
+    </a>
 </div>
 
 <style>

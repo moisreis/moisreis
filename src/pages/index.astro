@@ -10,7 +10,7 @@ import SiteCard from '../components/SiteCard.astro';
 import Section from '../components/Section.astro';
 
 import Rosanna from "../assets/rosanna.jpg";
-import Background from "../assets/iiqpxCg2GD4.jpg";
+import Background from "../assets/3Dc-I-65ug.jpg";
 import JudasAsBotasDe from "../assets/judasasbotasde.png";
 import Pobrefobia from "../assets/pobrefobia.png";
 import Imbe from "../assets/imbe.png";
@@ -38,11 +38,11 @@ const items = [
 ---
 
 <Layout>
-    <Cta title="Sua ideia merece voar alto. E eu posso te ajudar" call="Me conte sua ideia"
+    <Cta title="Sua ideia merece voar alto. E eu sei que posso te ajudar" call="Me conte sua ideia"
          text="Sou Moisés Reis, desenvolvedor especializado em soluções modernas com Next.js, WordPress e Ruby on Rails. Transformo suas ideias em sites rápidos, seguros e bonitos — do seu jeito."
          bg={Background}>
     </Cta>
-    <Section name="meus clientes" title="Você também pode ter um site assim"
+    <Section name="meus clientes" title="Você também pode ter um site assim 🚀"
              text="Clientes satisfeitos são minha maior propaganda. Entre em contato e descubra como posso ajudar você a crescer online com qualidade e confiança."
              button="Quero meu site"
              id="socialProof" layout="gridThree">
@@ -53,36 +53,48 @@ const items = [
         <Testimonial avatar={Gabriela} name="Gabriela Oliveira" position="Design Gráfica"
                      text="Trabalhar com Moisés foi muito tranquilo. Como colega de trabalho dele, sempre foi muito fácil trabalhar em equipe, tirar dúvidas, entender as necessidades e fazermos os projetos dar certo. Moisés é muito focado e talentoso, tem um bom senso de responsabilidade e por isso tivemos resultados tão bons em tão pouco tempo. Espero ter a oportunidade de trabalhar junto a ele novamente."/>
     </Section>
-    <Section name="meus trabalhos" title="Histórias de sucesso"
+    <Section name="meus trabalhos" title="Histórias de sucesso 🏆"
              text="Trabalho com tecnologias modernas para entregar soluções robustas, bonitas e funcionais. Veja o que posso fazer por você."
              button="Faça um orçamento"
              id="MyWork" layout="gridTwo">
         <SiteCard title="JUDAS, As botas de"
                   text="Planejamento, design e desenvolvimento de uma plataforma de artigos de opinião e científicos."
                   techs="WordPress, JavaScript e Tailwind"
-                  bg={JudasAsBotasDe}/>
+                  bg={JudasAsBotasDe}
+                  link="https://judasasbotasde.com.br/"
+        />
         <SiteCard title="Imbê"
                   text="Planejamento, design e desenvolvimento de site institucional para uma agência de design de interiores em São Paulo, focado em SEO."
                   techs="WordPress, SCSS, JavaScript e ACF"
-                  bg={Imbe}/>
+                  bg={Imbe}
+                  link="https://imbe.design/"
+        />
         <SiteCard title="Pobrefobia"
                   text="Planejamento, design e desenvolvimento de plataforma de artigos do Observatório da Aporofobia em São Paulo."
                   techs="WordPress, Tailwind CSS"
-                  bg={Pobrefobia}/>
+                  bg={Pobrefobia}
+                  link="https://pobrefobia.com/"
+        />
         <SiteCard title="Clínica Derma Prime"
                   text="Migração e manutenção de site para uma clínica especializada em Brasília"
                   techs="WordPress"
-                  bg={ClinicaDermaPrime}/>
+                  bg={ClinicaDermaPrime}
+                  link="https://www.clinicadermaprime.com.br/"
+        />
         <SiteCard title="Bridal Stories"
                   text="Manutenção e correção de erros em uma loja de vestidos de noiva em Portugal"
                   techs="WordPress"
-                  bg={BridalStories}/>
+                  bg={BridalStories}
+                  link="https://www.bridalstories.pt/"
+        />
         <SiteCard title="LAPEC"
                   text="Migração de site para o Joomla em Jacobina"
                   techs="Joomla"
-                  bg={Lapec}/>
+                  bg={Lapec}
+                  link="https://lapec.com.br/"
+        />
     </Section>
-    <Section name="serviços" title="O que eu faço?"
+    <Section name="serviços" title="O que eu faço? 🛠️"
              text="Trabalho com tecnologias modernas para entregar soluções robustas, bonitas e funcionais. Veja o que posso fazer por você."
              id="MyServices" layout="gridThree">
         <ServiceCard title="Site institucional"
@@ -104,12 +116,14 @@ const items = [
                      text="Precisa tomar uma decisão técnica? Com minha experiência, posso te orientar a escolher as melhores soluções."
                      price="R$ 150/hora"/>
     </Section>
-    <Section name="processo de entrega" title="Como trabalho"
+    <Section name="processo de entrega" title="Como trabalho 🧭"
              text="Cada projeto é único, mas sigo princípios que garantem clareza, qualidade e responsabilidade."
              id="Process" layout="gridThree">
         {items.map((item, index) => (
-            <ProcessCard name={item.name} number={index + 1} text={item.text}></ProcessCard>
+                <ProcessCard name={item.name} number={index + 1} text={item.text}></ProcessCard>
         ))}
     </Section>
-    <CtaCenter id="AboutMe" title="Baiano, engenheiro de software em formação e apaixonado por construir com propósito" text="Sou Moisés Reis — desenvolvedor web e estudante de Engenharia de Software na UNINTER. Nascido num povoado da Bahia, iniciei minha formação na Escola Família Agrícola de Jabuticaba, onde aprendi desde cedo a valorizar o trabalho, a comunidade e o conhecimento aplicado à vida real. Depois, estudei Informática no IFBA, o que despertou meu interesse pela tecnologia. Por um tempo, cursei História, área pela qual ainda tenho grande apreço. Mas foi na Engenharia de Software que encontrei o equilíbrio entre razão, criação e propósito. A escolha pela programação veio do desejo de construir soluções com lógica, beleza e utilidade. Ao longo dos anos, mergulhei em tecnologias como Next.js, WordPress e Ruby on Rails, sempre buscando não só o domínio técnico, mas uma postura responsável e ética diante de cada projeto. Sou casado, tutor de cinco gatos e interessado por ciência, história e tecnologia. Levo para minha rotina profissional os mesmos valores que cultivo na vida pessoal: clareza, compromisso e respeito por quem confia em mim" call="Vamos trabalhar juntos" link="https://tally.so/r/wo1EeP" name="quem eu sou"></CtaCenter>
+    <CtaCenter id="AboutMe" title="Baiano, engenheiro de software em formação e apaixonado por construir com propósito"
+               text="Sou Moisés Reis — desenvolvedor web e estudante de Engenharia de Software na UNINTER. Nascido num povoado da Bahia, iniciei minha formação na Escola Família Agrícola de Jabuticaba, onde aprendi desde cedo a valorizar o trabalho, a comunidade e o conhecimento aplicado à vida real. Depois, estudei Informática no IFBA, o que despertou meu interesse pela tecnologia. Por um tempo, cursei História, área pela qual ainda tenho grande apreço. Mas foi na Engenharia de Software que encontrei o equilíbrio entre razão, criação e propósito. A escolha pela programação veio do desejo de construir soluções com lógica, beleza e utilidade. Ao longo dos anos, mergulhei em tecnologias como Next.js, WordPress e Ruby on Rails, sempre buscando não só o domínio técnico, mas uma postura responsável e ética diante de cada projeto. Sou casado, tutor de cinco gatos e interessado por ciência, história e tecnologia. Levo para minha rotina profissional os mesmos valores que cultivo na vida pessoal: clareza, compromisso e respeito por quem confia em mim"
+               call="Vamos trabalhar juntos" link="https://tally.so/r/wo1EeP" name="quem eu sou"></CtaCenter>
 </Layout>

@@ -10,6 +10,7 @@
     --color-primary: #5409DA;
     --color-primary-light: #8DD8FF;
     --color-secondary: #C5BAFF;
+    --color-secondary-light: #EEF5FF;
     --color-tertiary: #FFF100;
     --color-background: #fbfbfb;
     --color-body: #333333;
@@ -20,4 +21,11 @@
     --color-white: #ffffff;
 
     --shadow-card: 12px 12px 0px;
+    --shadow-header: 3px 3px 0px;
+}
+
+@layer utility {
+    .rotate-animation {
+        @apply hover:rotate-6 transition-transform
+    }
 }

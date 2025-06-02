@@ -1,5 +1,5 @@
 ---
-import Badge from "./Badge.astro";
+import Header from "./Header.astro";
 import Button from '../components/Button.astro';
 
 import {Image} from "astro:assets";
@@ -11,15 +11,15 @@ const bg = Astro.props.bg;
 ---
 
 <!-- @component START: Cta -->
-<section class="w-full flex flex-col justify-center items-start gap-6 py-24 relative h-screen rounded-b-2xl">
+<section class="w-full flex flex-col justify-center items-start gap-6 py-24 relative h-screen -top-3">
     <div class="flex flex-col justify-start relative z-10">
         {title && (
-                <h1 class="font-display text-5xl lg:text-7xl text-background text-left w-full lg:w-1/2 font-black mb-12">{title}</h1>)}
-        {text && (<p class="font-sans text-xl text-left w-full lg:w-1/2 text-background">{text}</p>)}
+                <h1 class="font-display text-5xl xl:text-8xl text-background text-left w-full xl:w-2/3 font-black mb-12">{title}</h1>)}
+        {text && (<p class="font-sans text-xl text-left w-full xl:w-2/3 text-background">{text}</p>)}
     </div>
     <Button title={call} link="https://tally.so/r/wo1EeP" variant="primary" size="large"/>
     {bg && (
-            <div class="w-screen h-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-0 grainEffect overflow-hidden">
+            <div class="w-[95vw] rounded-3xl h-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-0 overflow-hidden">
                 <Image src={bg} alt="Background" class="w-full h-full object-cover aspect-square"/>
             </div>
     )}
