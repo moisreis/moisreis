@@ -21,7 +21,7 @@ const styles = `${base} ${layouts[layout] || layouts["gridTwo"]}`;
 <!-- @component START: Section -->
 <section class="flex flex-col justify-center pt-12 pb-12" id={id}>
     <Heading name={name} title={title} text={text} button={button}></Heading>
-    <div class={styles}>
+    <div class=`${styles} first:rotate-12`>
         <slot/>
     </div>
 </section>

@@ -9,7 +9,7 @@
     --color-*: initial;
     --color-primary: #5409DA;
     --color-primary-light: #8DD8FF;
-    --color-secondary: #0D9276;
+    --color-secondary: #C5BAFF;
     --color-tertiary: #FFF100;
     --color-background: #fbfbfb;
     --color-body: #333333;
@@ -18,4 +18,6 @@
     --color-black: #000000;
     --color-accent: #f9f9f9;
     --color-white: #ffffff;
+
+    --shadow-card: 12px 12px 0px;
 }

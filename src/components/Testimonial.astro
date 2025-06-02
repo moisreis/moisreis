@@ -10,7 +10,7 @@ const text = Astro.props.text;
 ---
 
 <!-- @component START: Testimonial -->
-<div class="flex flex-col justify-start items-start p-6 outline-3 bg-white outline-black outline-dashed rounded-2xl boxShadow">
+<div class="flex flex-col justify-start items-start p-6 outline-3 bg-white outline-black outline-dashed rounded-2xl boxShadow first:-rotate-6">
     <Avatar src={avatar} alt={name} />
     <h2 class="font-display text-base font-medium">{name}</h2>
     <span class="font-display text-base font-light">{position}</span>
@@ -19,6 +19,6 @@ const text = Astro.props.text;
 
 <style>
     .boxShadow {
-        box-shadow: 12px 12px 0px #0D9276;
+        box-shadow: var(--shadow-card) var(--color-secondary);
     }
 </style>

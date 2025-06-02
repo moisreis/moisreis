@@ -1,15 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Cta from '../components/Cta.astro';
+import CtaCenter from '../components/CtaCenter.astro';
 import Testimonial from '../components/Testimonial.astro';
-import Heading from '../components/Heading.astro';
+import ProcessCard from '../components/ProcessCard.astro';
 import Button from '../components/Button.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import SiteCard from '../components/SiteCard.astro';
 import Section from '../components/Section.astro';
 
 import Rosanna from "../assets/rosanna.jpg";
-import Background from "../assets/3Dc-I-65ug.jpg";
+import Background from "../assets/iiqpxCg2GD4.jpg";
 import JudasAsBotasDe from "../assets/judasasbotasde.png";
 import Pobrefobia from "../assets/pobrefobia.png";
 import Imbe from "../assets/imbe.png";
@@ -37,13 +38,13 @@ const items = [
 ---
 
 <Layout>
-    <Cta title="Você precisa de um site? Com certeza, eu posso te ajudar" call="Me conte sua ideia"
+    <Cta title="Sua ideia merece voar alto. E eu posso te ajudar" call="Me conte sua ideia"
          text="Sou Moisés Reis, desenvolvedor especializado em soluções modernas com Next.js, WordPress e Ruby on Rails. Transformo suas ideias em sites rápidos, seguros e bonitos — do seu jeito."
          bg={Background}>
     </Cta>
     <Section name="meus clientes" title="Você também pode ter um site assim"
              text="Clientes satisfeitos são minha maior propaganda. Entre em contato e descubra como posso ajudar você a crescer online com qualidade e confiança."
-             button="Vamos trabalhar juntos"
+             button="Quero meu site"
              id="socialProof" layout="gridThree">
         <Testimonial avatar={Rosanna} name="Rosana Sant'Anna" position="Dona da Imbê"
                      text="Fiz o site da minha empresa com o Moisés! Desde o início, foi uma experiência muito agradável, com reuniões e mensagens, uma relação sempre muito atenciosa. Além de dominar todos os conhecimentos técnicos de web design, o Moisés também contribuiu com ótimas ideias de conteúdo. Ele soube traduzir a essência da minha marca com muito profissionalismo. O resultado final ficou com a nossa cara e muito bonito. Recomendo bastante!."/>
@@ -54,7 +55,7 @@ const items = [
     </Section>
     <Section name="meus trabalhos" title="Histórias de sucesso"
              text="Trabalho com tecnologias modernas para entregar soluções robustas, bonitas e funcionais. Veja o que posso fazer por você."
-             button="Vamos trabalhar juntos"
+             button="Faça um orçamento"
              id="MyWork" layout="gridTwo">
         <SiteCard title="JUDAS, As botas de"
                   text="Planejamento, design e desenvolvimento de uma plataforma de artigos de opinião e científicos."
@@ -83,7 +84,6 @@ const items = [
     </Section>
     <Section name="serviços" title="O que eu faço?"
              text="Trabalho com tecnologias modernas para entregar soluções robustas, bonitas e funcionais. Veja o que posso fazer por você."
-             button="Vamos trabalhar juntos"
              id="MyServices" layout="gridThree">
         <ServiceCard title="Site institucional"
                      text="Ideal para empresas, profissionais e projetos que precisam de uma presença digital sólida e confiável."
@@ -106,39 +106,10 @@ const items = [
     </Section>
     <Section name="processo de entrega" title="Como trabalho"
              text="Cada projeto é único, mas sigo princípios que garantem clareza, qualidade e responsabilidade."
-             button="Vamos trabalhar juntos"
              id="Process" layout="gridThree">
         {items.map((item, index) => (
-                <li class="flex flex-col gap-3 p-6 outline-3 bg-white outline-black outline-dashed rounded-2xl">
-                    <span class="font-display text-lg text-primary font-medium">{index + 1}</span>
-                    <h3 class="text-lg font-medium font-display text-primary">{item.name}</h3>
-                    <p class="text-lg text-muted font-sans">{item.text}</p>
-                </li>
+            <ProcessCard name={item.name} number={index + 1} text={item.text}></ProcessCard>
         ))}
     </Section>
-    <!-- @section: AboutMe -->
-    <section class="flex flex-col justify-center gap-12 pt-12 pb-12" id="AboutMe">
-        <div class="w-full flex flex-col justify-center items-center gap-6 py-24 relative">
-            <div class="flex flex-col justify-center relative z-10 items-center">
-                <span class="font-display text-base text-center text-primary font-light mb-6">quem eu sou</span>
-                <h1 class="font-display text-5xl lg:text-7xl text-center w-full lg:w-3/4 font-black mb-12">Baiano, <i>engenheiro
-                    de software</i> em
-                    formação e apaixonado por construir com propósito</h1>
-                <p class="font-sans text-xl text-center w-full lg:w-3/4 text-muted">Sou Moisés Reis — desenvolvedor web
-                    e
-                    estudante de Engenharia de Software na UNINTER. Nascido num povoado da Bahia, iniciei minha formação
-                    na Escola Família Agrícola de Jabuticaba, onde aprendi desde cedo a valorizar o trabalho, a
-                    comunidade e o conhecimento aplicado à vida real. Depois, estudei Informática no IFBA, o que
-                    despertou meu interesse pela tecnologia. Por um tempo, cursei História, área pela qual ainda tenho
-                    grande apreço. Mas foi na Engenharia de Software que encontrei o equilíbrio entre razão, criação e
-                    propósito. A escolha pela programação veio do desejo de construir soluções com lógica, beleza e
-                    utilidade. Ao longo dos anos, mergulhei em tecnologias como Next.js, WordPress e Ruby on Rails,
-                    sempre buscando não só o domínio técnico, mas uma postura responsável e ética diante de cada
-                    projeto. Sou casado, tutor de cinco gatos e interessado por ciência, história e tecnologia. Levo
-                    para minha rotina profissional os mesmos valores que cultivo na vida pessoal: clareza, compromisso e
-                    respeito por quem confia em mim</p>
-            </div>
-            <Button title="Entre em contato" link="https://tally.so/r/wo1EeP" variant="primary" size="large"/>
-        </div>
-    </section>
+    <CtaCenter id="AboutMe" title="Baiano, engenheiro de software em formação e apaixonado por construir com propósito" text="Sou Moisés Reis — desenvolvedor web e estudante de Engenharia de Software na UNINTER. Nascido num povoado da Bahia, iniciei minha formação na Escola Família Agrícola de Jabuticaba, onde aprendi desde cedo a valorizar o trabalho, a comunidade e o conhecimento aplicado à vida real. Depois, estudei Informática no IFBA, o que despertou meu interesse pela tecnologia. Por um tempo, cursei História, área pela qual ainda tenho grande apreço. Mas foi na Engenharia de Software que encontrei o equilíbrio entre razão, criação e propósito. A escolha pela programação veio do desejo de construir soluções com lógica, beleza e utilidade. Ao longo dos anos, mergulhei em tecnologias como Next.js, WordPress e Ruby on Rails, sempre buscando não só o domínio técnico, mas uma postura responsável e ética diante de cada projeto. Sou casado, tutor de cinco gatos e interessado por ciência, história e tecnologia. Levo para minha rotina profissional os mesmos valores que cultivo na vida pessoal: clareza, compromisso e respeito por quem confia em mim" call="Vamos trabalhar juntos" link="https://tally.so/r/wo1EeP" name="quem eu sou"></CtaCenter>
 </Layout>

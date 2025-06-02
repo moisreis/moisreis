@@ -5,7 +5,7 @@ const text = Astro.props.text;
 ---
 
 <!-- @component START: ServiceCard -->
-<div class="p-12 outline-3 bg-white outline-secondary outline-dashed rounded-2xl boxShadow">
+<div class="p-12 outline-3 bg-white outline-black outline-dashed rounded-2xl boxShadow first:-rotate-6 last:rotate-6">
     <h3 class="text-lg font-display font-medium mb-3">{title}</h3>
     <p class="text-base text-muted mb-6">{text}</p>
     <p class="text-base font-medium text-body">A partir de <span class="uppercase font-bold">{price}</span></p>
@@ -13,6 +13,6 @@ const text = Astro.props.text;
 
 <style>
     .boxShadow {
-        box-shadow: 12px 12px 0px #8DD8FF;
+        box-shadow: var(--shadow-card) var(--color-primary-light);
     }
 </style>
