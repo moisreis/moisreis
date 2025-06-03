@@ -4,7 +4,7 @@
 @theme {
     --font-display: "Bricolage Grotesque", "sans-serif";
     --font-body: "GeneralSans-Variable";
-    --font-sans: "GeneralSans-Variable", "sans-serif";
+    --font-sans: "GeneralSans-Variable";
 
     --color-*: initial;
     --color-primary: #5409DA;
