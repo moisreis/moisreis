@@ -9,6 +9,7 @@ import SiteCard from '../components/SiteCard.astro';
 import Section from '../components/Section.astro';
 
 import Rosanna from "../assets/rosanna.jpg";
+import Marta from "../assets/marta.png";
 import BackgroundOne from "../assets/djxeSyUR0j8.jpg";
 import BackgroundoTwo from "../assets/iiqpxCg2GD4.jpg";
 import JudasAsBotasDe from "../assets/judasasbotasde.png";
@@ -19,6 +20,7 @@ import BridalStories from "../assets/bridalstories.png";
 import Lapec from "../assets/lapec.png";
 import Laila from "../assets/laila.png";
 import Gabriela from "../assets/gabriela.png"
+import MultElevadoresABC from "../assets/multelevadoresabc.png"
 
 const items = [
     {
@@ -37,10 +39,9 @@ const items = [
 ---
 
 <Layout>
-    <Cta title="Sua ideia merece voar alto. E eu sei que posso te ajudar ✨" call="Me conte sua ideia"
-         text="Sou Moisés Reis, desenvolvedor especializado em soluções modernas com Next.js, WordPress e Ruby on Rails. Transformo suas ideias em sites rápidos, seguros e bonitos — do seu jeito."
-         bgOne={BackgroundOne} bgTwo={BackgroundoTwo}>
-    </Cta>
+    <CtaCenter id="AboutMe" title="Baiano, engenheiro de software em formação e apaixonado por construir com propósito"
+               text="Sou Moisés Reis — desenvolvedor web e estudante de Engenharia de Software na UNINTER. Nascido num povoado da Bahia, iniciei minha formação na Escola Família Agrícola de Jabuticaba, onde aprendi desde cedo a valorizar o trabalho, a comunidade e o conhecimento aplicado à vida real. Depois, estudei Informática no IFBA, o que despertou meu interesse pela tecnologia. Por um tempo, cursei História, área pela qual ainda tenho grande apreço. Mas foi na Engenharia de Software que encontrei o equilíbrio entre razão, criação e propósito. A escolha pela programação veio do desejo de construir soluções com lógica, beleza e utilidade. Ao longo dos anos, mergulhei em tecnologias como Next.js, WordPress e Ruby on Rails, sempre buscando não só o domínio técnico, mas uma postura responsável e ética diante de cada projeto. Sou casado, tutor de cinco gatos e interessado por ciência, história e tecnologia. Levo para minha rotina profissional os mesmos valores que cultivo na vida pessoal: clareza, compromisso e respeito por quem confia em mim"
+               call="Vamos trabalhar juntos" link="https://tally.so/r/wo1EeP" name="quem eu sou"></CtaCenter>
     <Section link="https://tally.so/r/wo1EeP" name="meus clientes" title="Você também pode ter um site assim 🚀"
              text="Clientes satisfeitos são minha maior propaganda. Entre em contato e descubra como posso ajudar você a crescer online com qualidade e confiança."
              button="Quero meu site"
@@ -51,6 +52,8 @@ const items = [
                      text="Moisés e eu trabalhamos juntos no desenvolvimento de um site, entreguei a ele a UI do projeto e ele ficou responsável pelo desenvolvimento. Tive uma experiência bem positiva, vale ressaltar sua bagagem técnica e facilidade de comunicação. Recomendo!"/>
         <Testimonial avatar={Gabriela} name="Gabriela Dantas" position="Designer"
                      text="Trabalhar com Moisés foi muito tranquilo. Como colega de trabalho dele, sempre foi muito fácil trabalhar em equipe, tirar dúvidas, entender as necessidades e fazermos os projetos dar certo. Moisés é muito focado e talentoso, tem um bom senso de responsabilidade e por isso tivemos resultados tão bons em tão pouco tempo. Espero ter a oportunidade de trabalhar junto a ele novamente."/>
+        <Testimonial avatar={Marta} name="Marta Sampaio" position="Empresária"
+                     text="Passando para agradecer pela atenção e cuidado com o nosso site, pela agilidade e por todo o tempo demonstrando que podíamos confiar na sua empresa. Muito obrigada! Pode ter certeza de que iremos te indicar. Nós da Mult Elevadores agradecemos e seguimos com essa parceria para futuros trabalhos"/>
     </Section>
     <Section name="meus trabalhos" title="Histórias de sucesso 🏆"
              text="Trabalho com tecnologias modernas para entregar soluções robustas, bonitas e funcionais. Veja o que posso fazer por você."
@@ -68,6 +71,12 @@ const items = [
                   techs="WordPress, SCSS, JavaScript e ACF"
                   bg={Imbe}
                   link="https://imbe.design/"
+        />
+        <SiteCard title="Mult Elevadores"
+                  text="Correção de problemas, criação de site e melhorias de segurança"
+                  techs="WordPress e Elementor"
+                  bg={MultElevadoresABC}
+                  link="http://multelevadoresabc.com.br/"
         />
         <SiteCard title="Pobrefobia"
                   text="Planejamento, design e desenvolvimento de plataforma de artigos do Observatório da Aporofobia em São Paulo."
@@ -123,7 +132,8 @@ const items = [
                 <ProcessCard name={item.name} number={index + 1} text={item.text}></ProcessCard>
         ))}
     </Section>
-    <CtaCenter id="AboutMe" title="Baiano, engenheiro de software em formação e apaixonado por construir com propósito"
-               text="Sou Moisés Reis — desenvolvedor web e estudante de Engenharia de Software na UNINTER. Nascido num povoado da Bahia, iniciei minha formação na Escola Família Agrícola de Jabuticaba, onde aprendi desde cedo a valorizar o trabalho, a comunidade e o conhecimento aplicado à vida real. Depois, estudei Informática no IFBA, o que despertou meu interesse pela tecnologia. Por um tempo, cursei História, área pela qual ainda tenho grande apreço. Mas foi na Engenharia de Software que encontrei o equilíbrio entre razão, criação e propósito. A escolha pela programação veio do desejo de construir soluções com lógica, beleza e utilidade. Ao longo dos anos, mergulhei em tecnologias como Next.js, WordPress e Ruby on Rails, sempre buscando não só o domínio técnico, mas uma postura responsável e ética diante de cada projeto. Sou casado, tutor de cinco gatos e interessado por ciência, história e tecnologia. Levo para minha rotina profissional os mesmos valores que cultivo na vida pessoal: clareza, compromisso e respeito por quem confia em mim"
-               call="Vamos trabalhar juntos" link="https://tally.so/r/wo1EeP" name="quem eu sou"></CtaCenter>
+    <Cta title="Sua ideia merece voar alto. E eu sei que posso te ajudar ✨" call="Me conte sua ideia"
+         text="Sou Moisés Reis, desenvolvedor especializado em soluções modernas com Next.js, WordPress e Ruby on Rails. Transformo suas ideias em sites rápidos, seguros e bonitos — do seu jeito."
+         bgOne={BackgroundOne} bgTwo={BackgroundoTwo}>
+    </Cta>
 </Layout>
