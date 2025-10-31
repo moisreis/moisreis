@@ -1,139 +1,220 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Cta from '../components/Cta.astro';
-import CtaCenter from '../components/CtaCenter.astro';
-import Testimonial from '../components/Testimonial.astro';
-import ProcessCard from '../components/ProcessCard.astro';
-import ServiceCard from '../components/ServiceCard.astro';
-import SiteCard from '../components/SiteCard.astro';
-import Section from '../components/Section.astro';
+import Layout from "../layouts/Layout.astro";
+import Cta from "../components/Cta.astro";
+import CtaCenter from "../components/CtaCenter.astro";
+import Testimonial from "../components/Testimonial.astro";
+import ProcessCard from "../components/ProcessCard.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import SiteCard from "../components/SiteCard.astro";
+import Section from "../components/Section.astro";
 
 import Rosanna from "../assets/rosanna.jpg";
 import Marta from "../assets/marta.png";
 import BackgroundOne from "../assets/djxeSyUR0j8.jpg";
 import BackgroundoTwo from "../assets/iiqpxCg2GD4.jpg";
 import JudasAsBotasDe from "../assets/judasasbotasde.png";
+import Apae from "../assets/apaejacobina.png";
 import Pobrefobia from "../assets/pobrefobia.png";
 import Imbe from "../assets/imbe.png";
 import ClinicaDermaPrime from "../assets/clinicadermaprime.png";
 import BridalStories from "../assets/bridalstories.png";
 import Lapec from "../assets/lapec.png";
 import Laila from "../assets/laila.png";
-import Gabriela from "../assets/gabriela.png"
-import MultElevadoresABC from "../assets/multelevadoresabc.png"
+import Gabriela from "../assets/gabriela.png";
+import Katia from "../assets/katia.png";
+import MultElevadoresABC from "../assets/multelevadoresabc.png";
 
 const items = [
     {
-        name: 'Conversa inicial de 10 minutos',
-        text: 'Entendo sua ideia, contexto, necessidades e metas. Sem pressa e com muita atenção.'
+        name: "Conversa inicial de 10 minutos",
+        text: "Entendo sua ideia, contexto, necessidades e metas. Sem pressa e com muita atenção.",
     },
     {
-        name: 'Proposta sob medida',
-        text: 'Envio uma proposta com escopo claro, prazos realistas e valores justos.'
+        name: "Proposta sob medida",
+        text: "Envio uma proposta com escopo claro, prazos realistas e valores justos.",
     },
     {
-        name: 'Execução e entrega',
-        text: 'Desenvolvimento com revisões, testes e publicação. Transparência e acompanhamento.'
+        name: "Execução e entrega",
+        text: "Desenvolvimento com revisões, testes e publicação. Transparência e acompanhamento.",
     },
 ];
 ---
 
 <Layout>
-    <CtaCenter id="AboutMe" title="Baiano, engenheiro de software em formação e apaixonado por construir com propósito"
-               text="Sou Moisés Reis — desenvolvedor web e estudante de Engenharia de Software na UNINTER. Nascido num povoado da Bahia, iniciei minha formação na Escola Família Agrícola de Jabuticaba, onde aprendi desde cedo a valorizar o trabalho, a comunidade e o conhecimento aplicado à vida real. Depois, estudei Informática no IFBA, o que despertou meu interesse pela tecnologia. Por um tempo, cursei História, área pela qual ainda tenho grande apreço. Mas foi na Engenharia de Software que encontrei o equilíbrio entre razão, criação e propósito. A escolha pela programação veio do desejo de construir soluções com lógica, beleza e utilidade. Ao longo dos anos, mergulhei em tecnologias como Next.js, WordPress e Ruby on Rails, sempre buscando não só o domínio técnico, mas uma postura responsável e ética diante de cada projeto. Sou casado, tutor de cinco gatos e interessado por ciência, história e tecnologia. Levo para minha rotina profissional os mesmos valores que cultivo na vida pessoal: clareza, compromisso e respeito por quem confia em mim"
-               call="Vamos trabalhar juntos" link="https://tally.so/r/wo1EeP" name="quem eu sou"></CtaCenter>
-    <Section link="https://tally.so/r/wo1EeP" name="meus clientes" title="Você também pode ter um site assim 🚀"
-             text="Clientes satisfeitos são minha maior propaganda. Entre em contato e descubra como posso ajudar você a crescer online com qualidade e confiança."
-             button="Quero meu site"
-             id="socialProof" layout="gridThree">
-        <Testimonial avatar={Rosanna} name="Rosana Sant'Anna" position="Dona da Imbê"
-                     text="Fiz o site da minha empresa com o Moisés! Desde o início, foi uma experiência muito agradável, com reuniões e mensagens, uma relação sempre muito atenciosa. Além de dominar todos os conhecimentos técnicos de web design, o Moisés também contribuiu com ótimas ideias de conteúdo. Ele soube traduzir a essência da minha marca com muito profissionalismo. O resultado final ficou com a nossa cara e muito bonito. Recomendo bastante!."/>
-        <Testimonial avatar={Laila} name="Laila Gebhard" position="Desenvolvedora Mainframe"
-                     text="Moisés e eu trabalhamos juntos no desenvolvimento de um site, entreguei a ele a UI do projeto e ele ficou responsável pelo desenvolvimento. Tive uma experiência bem positiva, vale ressaltar sua bagagem técnica e facilidade de comunicação. Recomendo!"/>
-        <Testimonial avatar={Gabriela} name="Gabriela Dantas" position="Designer"
-                     text="Trabalhar com Moisés foi muito tranquilo. Como colega de trabalho dele, sempre foi muito fácil trabalhar em equipe, tirar dúvidas, entender as necessidades e fazermos os projetos dar certo. Moisés é muito focado e talentoso, tem um bom senso de responsabilidade e por isso tivemos resultados tão bons em tão pouco tempo. Espero ter a oportunidade de trabalhar junto a ele novamente."/>
-        <Testimonial avatar={Marta} name="Marta Sampaio" position="Empresária"
-                     text="Passando para agradecer pela atenção e cuidado com o nosso site, pela agilidade e por todo o tempo demonstrando que podíamos confiar na sua empresa. Muito obrigada! Pode ter certeza de que iremos te indicar. Nós da Mult Elevadores agradecemos e seguimos com essa parceria para futuros trabalhos"/>
-    </Section>
-    <Section name="meus trabalhos" title="Histórias de sucesso 🏆"
-             text="Trabalho com tecnologias modernas para entregar soluções robustas, bonitas e funcionais. Veja o que posso fazer por você."
-             button="Faça um orçamento"
-             link="https://tally.so/r/wo1EeP"
-             id="MyWork" layout="gridTwo">
-        <SiteCard title="JUDAS, As botas de"
-                  text="Planejamento, design e desenvolvimento de uma plataforma de artigos de opinião e científicos."
-                  techs="WordPress, JavaScript e Tailwind"
-                  bg={JudasAsBotasDe}
-                  link="https://judasasbotasde.com.br/"
+    <CtaCenter
+        id="AboutMe"
+        title="Baiano, engenheiro de software em formação e apaixonado por construir com propósito"
+        text="Sou Moisés Reis — desenvolvedor web e estudante de Engenharia de Software na UNINTER. Nascido num povoado da Bahia, iniciei minha formação na Escola Família Agrícola de Jabuticaba, onde aprendi desde cedo a valorizar o trabalho, a comunidade e o conhecimento aplicado à vida real. Depois, estudei Informática no IFBA, o que despertou meu interesse pela tecnologia. Por um tempo, cursei História, área pela qual ainda tenho grande apreço. Mas foi na Engenharia de Software que encontrei o equilíbrio entre razão, criação e propósito. A escolha pela programação veio do desejo de construir soluções com lógica, beleza e utilidade. Ao longo dos anos, mergulhei em tecnologias como Next.js, WordPress e Ruby on Rails, sempre buscando não só o domínio técnico, mas uma postura responsável e ética diante de cada projeto. Sou casado, tutor de cinco gatos e interessado por ciência, história e tecnologia. Levo para minha rotina profissional os mesmos valores que cultivo na vida pessoal: clareza, compromisso e respeito por quem confia em mim"
+        call="Vamos trabalhar juntos"
+        link="https://tally.so/r/wo1EeP"
+        name="quem eu sou"
+    />
+    <Section
+        link="https://tally.so/r/wo1EeP"
+        name="meus clientes"
+        title="Você também pode ter um site assim 🚀"
+        text="Clientes satisfeitos são minha maior propaganda. Entre em contato e descubra como posso ajudar você a crescer online com qualidade e confiança."
+        button="Quero meu site"
+        id="socialProof"
+        layout="gridThree"
+    >
+        <Testimonial
+            avatar={Katia}
+            name="Kátia Leite"
+            position="Diretora Administrativa da APAE"
+            text="Com muita competência, atenção e cumprimento aos prazos, Moisés desenvolveu o site da APAE de Jacobina, instituição que administro. Foi tranquilo trabalhar com ele, que desde o início se mostrou comprometido em fazer um trabalho com qualidade e acessibilidade."
         />
-        <SiteCard title="Imbê"
-                  text="Planejamento, design e desenvolvimento de site institucional para uma agência de design de interiores em São Paulo, focado em SEO."
-                  techs="WordPress, SCSS, JavaScript e ACF"
-                  bg={Imbe}
-                  link="https://imbe.design/"
+        <Testimonial
+            avatar={Rosanna}
+            name="Rosana Sant'Anna"
+            position="Dona da Imbê"
+            text="Fiz o site da minha empresa com o Moisés! Desde o início, foi uma experiência muito agradável, com reuniões e mensagens, uma relação sempre muito atenciosa. Além de dominar todos os conhecimentos técnicos de web design, o Moisés também contribuiu com ótimas ideias de conteúdo. Ele soube traduzir a essência da minha marca com muito profissionalismo. O resultado final ficou com a nossa cara e muito bonito. Recomendo bastante!."
         />
-        <SiteCard title="Mult Elevadores"
-                  text="Correção de problemas, criação de site e melhorias de segurança"
-                  techs="WordPress e Elementor"
-                  bg={MultElevadoresABC}
-                  link="http://multelevadoresabc.com.br/"
+        <Testimonial
+            avatar={Laila}
+            name="Laila Gebhard"
+            position="Desenvolvedora Mainframe"
+            text="Moisés e eu trabalhamos juntos no desenvolvimento de um site, entreguei a ele a UI do projeto e ele ficou responsável pelo desenvolvimento. Tive uma experiência bem positiva, vale ressaltar sua bagagem técnica e facilidade de comunicação. Recomendo!"
         />
-        <SiteCard title="Pobrefobia"
-                  text="Planejamento, design e desenvolvimento de plataforma de artigos do Observatório da Aporofobia em São Paulo."
-                  techs="WordPress, Tailwind CSS"
-                  bg={Pobrefobia}
-                  link="https://pobrefobia.com/"
+        <Testimonial
+            avatar={Gabriela}
+            name="Gabriela Dantas"
+            position="Designer"
+            text="Trabalhar com Moisés foi muito tranquilo. Como colega de trabalho dele, sempre foi muito fácil trabalhar em equipe, tirar dúvidas, entender as necessidades e fazermos os projetos dar certo. Moisés é muito focado e talentoso, tem um bom senso de responsabilidade e por isso tivemos resultados tão bons em tão pouco tempo. Espero ter a oportunidade de trabalhar junto a ele novamente."
         />
-        <SiteCard title="Clínica Derma Prime"
-                  text="Migração e manutenção de site para uma clínica especializada em Brasília"
-                  techs="WordPress"
-                  bg={ClinicaDermaPrime}
-                  link="https://www.clinicadermaprime.com.br/"
-        />
-        <SiteCard title="Bridal Stories"
-                  text="Manutenção e correção de erros em uma loja de vestidos de noiva em Portugal"
-                  techs="WordPress"
-                  bg={BridalStories}
-                  link="https://www.bridalstories.pt/"
-        />
-        <SiteCard title="LAPEC"
-                  text="Migração de site para o Joomla em Jacobina"
-                  techs="Joomla"
-                  bg={Lapec}
-                  link="https://lapec.com.br/"
+        <Testimonial
+            avatar={Marta}
+            name="Marta Sampaio"
+            position="Empresária"
+            text="Passando para agradecer pela atenção e cuidado com o nosso site, pela agilidade e por todo o tempo demonstrando que podíamos confiar na sua empresa. Muito obrigada! Pode ter certeza de que iremos te indicar. Nós da Mult Elevadores agradecemos e seguimos com essa parceria para futuros trabalhos"
         />
     </Section>
-    <Section name="serviços" title="O que eu faço? 🛠️"
-             text="Trabalho com tecnologias modernas para entregar soluções robustas, bonitas e funcionais. Veja o que posso fazer por você."
-             id="MyServices" layout="gridThree">
-        <ServiceCard title="Site institucional"
-                     text="Ideal para empresas, profissionais e projetos que precisam de uma presença digital sólida e confiável."
-                     price="R$ 1.200"/>
-        <ServiceCard title="Loja virtual"
-                     text="Venda seus produtos online com segurança, boa experiência de compra e integração com meios de pagamento."
-                     price="R$ 2.400"/>
-        <ServiceCard title="Blog profissional"
-                     text="Blog otimizado para performance, SEO e facilidade de publicação. Ótimo para quem quer autoridade e alcance."
-                     price="R$ 1.200"/>
-        <ServiceCard title="Site sob medida"
-                     text="Tem uma ideia fora do comum? Posso transformar sua visão em um produto digital único e funcional."
-                     price="R$ 3.000"/>
-        <ServiceCard title="Manutenção e suporte"
-                     text="Seu site está lento, desatualizado ou com problemas? Faço diagnósticos e correções com agilidade e precisão."
-                     price="R$ 150/hora"/>
-        <ServiceCard title="Consultoria técnica"
-                     text="Precisa tomar uma decisão técnica? Com minha experiência, posso te orientar a escolher as melhores soluções."
-                     price="R$ 150/hora"/>
+    <Section
+        name="meus trabalhos"
+        title="Histórias de sucesso 🏆"
+        text="Trabalho com tecnologias modernas para entregar soluções robustas, bonitas e funcionais. Veja o que posso fazer por você."
+        button="Faça um orçamento"
+        link="https://tally.so/r/wo1EeP"
+        id="MyWork"
+        layout="gridTwo"
+    >
+        <SiteCard
+            title="APAE de Jacobina"
+            text="Planejamento, design e desenvolvimento de site institucional para a APAE de Jacobina."
+            techs="WordPress, SCSS, JavaScript e ACF"
+            bg={Apae}
+            link="https://apaejacobina.org.br/"
+        />
+        <SiteCard
+            title="JUDAS, As botas de"
+            text="Planejamento, design e desenvolvimento de uma plataforma de artigos de opinião e científicos."
+            techs="WordPress, JavaScript e Tailwind"
+            bg={JudasAsBotasDe}
+            link="https://judasasbotasde.com.br/"
+        />
+        <SiteCard
+            title="Imbê"
+            text="Planejamento, design e desenvolvimento de site institucional para uma agência de design de interiores em São Paulo, focado em SEO."
+            techs="WordPress, SCSS, JavaScript e ACF"
+            bg={Imbe}
+            link="https://imbe.design/"
+        />
+        <SiteCard
+            title="Mult Elevadores"
+            text="Correção de problemas, criação de site e melhorias de segurança"
+            techs="WordPress e Elementor"
+            bg={MultElevadoresABC}
+            link="http://multelevadoresabc.com.br/"
+        />
+        <SiteCard
+            title="Pobrefobia"
+            text="Planejamento, design e desenvolvimento de plataforma de artigos do Observatório da Aporofobia em São Paulo."
+            techs="WordPress, Tailwind CSS"
+            bg={Pobrefobia}
+            link="https://pobrefobia.com/"
+        />
+        <SiteCard
+            title="Clínica Derma Prime"
+            text="Migração e manutenção de site para uma clínica especializada em Brasília"
+            techs="WordPress"
+            bg={ClinicaDermaPrime}
+            link="https://www.clinicadermaprime.com.br/"
+        />
+        <SiteCard
+            title="Bridal Stories"
+            text="Manutenção e correção de erros em uma loja de vestidos de noiva em Portugal"
+            techs="WordPress"
+            bg={BridalStories}
+            link="https://www.bridalstories.pt/"
+        />
+        <SiteCard
+            title="LAPEC"
+            text="Migração de site para o Joomla em Jacobina"
+            techs="Joomla"
+            bg={Lapec}
+            link="https://lapec.com.br/"
+        />
     </Section>
-    <Section name="processo de entrega" title="Como trabalho 🧭"
-             text="Cada projeto é único, mas sigo princípios que garantem clareza, qualidade e responsabilidade."
-             id="Process" layout="gridThree">
-        {items.map((item, index) => (
-                <ProcessCard name={item.name} number={index + 1} text={item.text}></ProcessCard>
-        ))}
+    <Section
+        name="serviços"
+        title="O que eu faço? 🛠️"
+        text="Trabalho com tecnologias modernas para entregar soluções robustas, bonitas e funcionais. Veja o que posso fazer por você."
+        id="MyServices"
+        layout="gridThree"
+    >
+        <ServiceCard
+            title="Site institucional"
+            text="Ideal para empresas, profissionais e projetos que precisam de uma presença digital sólida e confiável."
+            price="R$ 1.200"
+        />
+        <ServiceCard
+            title="Loja virtual"
+            text="Venda seus produtos online com segurança, boa experiência de compra e integração com meios de pagamento."
+            price="R$ 2.400"
+        />
+        <ServiceCard
+            title="Blog profissional"
+            text="Blog otimizado para performance, SEO e facilidade de publicação. Ótimo para quem quer autoridade e alcance."
+            price="R$ 1.200"
+        />
+        <ServiceCard
+            title="Site sob medida"
+            text="Tem uma ideia fora do comum? Posso transformar sua visão em um produto digital único e funcional."
+            price="R$ 3.000"
+        />
+        <ServiceCard
+            title="Manutenção e suporte"
+            text="Seu site está lento, desatualizado ou com problemas? Faço diagnósticos e correções com agilidade e precisão."
+            price="R$ 150/hora"
+        />
+        <ServiceCard
+            title="Consultoria técnica"
+            text="Precisa tomar uma decisão técnica? Com minha experiência, posso te orientar a escolher as melhores soluções."
+            price="R$ 150/hora"
+        />
     </Section>
-    <Cta title="Sua ideia merece voar alto. E eu sei que posso te ajudar ✨" call="Me conte sua ideia"
-         text="Sou Moisés Reis, desenvolvedor especializado em soluções modernas com Next.js, WordPress e Ruby on Rails. Transformo suas ideias em sites rápidos, seguros e bonitos — do seu jeito."
-         bgOne={BackgroundOne} bgTwo={BackgroundoTwo}>
-    </Cta>
+    <Section
+        name="processo de entrega"
+        title="Como trabalho 🧭"
+        text="Cada projeto é único, mas sigo princípios que garantem clareza, qualidade e responsabilidade."
+        id="Process"
+        layout="gridThree"
+    >
+        {
+            items.map((item, index) => (
+                <ProcessCard
+                    name={item.name}
+                    number={index + 1}
+                    text={item.text}
+                />
+            ))
+        }
+    </Section>
+    <Cta
+        title="Sua ideia merece voar alto. E eu sei que posso te ajudar ✨"
+        call="Me conte sua ideia"
+        text="Sou Moisés Reis, desenvolvedor especializado em soluções modernas com Next.js, WordPress e Ruby on Rails. Transformo suas ideias em sites rápidos, seguros e bonitos — do seu jeito."
+        bgOne={BackgroundOne}
+        bgTwo={BackgroundoTwo}
+    />
 </Layout>
